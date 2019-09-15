@@ -1,3 +1,8 @@
+body {
+    font: italic small-caps bold 15px cursive;
+    background: url(https://i.imgur.com/E1heTku.jpg) no-repeat;
+    background-size: cover;
+}
 .checked {
     color: orange;
 }
