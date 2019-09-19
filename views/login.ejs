@@ -1,51 +1,93 @@
-<% include ./partials/header %>
-<div class= "container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V12</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="/stylesheets/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/stylesheets/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/stylesheets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/stylesheets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/stylesheets/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="/stylesheets/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/stylesheets/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/stylesheets/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('/stylesheets/images/avatar-01.jpg');">
+			<div class="wrap-login100 p-t-190 p-b-30">
+				<form class="login100-form validate-form" action="/login" method="POST" >
+					<div class="login100-form-avatar">
+						<img src="/stylesheets/images/avatar-01.jpg" alt="AVATAR">
+					</div>
 
-    <div class="row text-center">
-        <h1>Login Form</h1>
-        <div style="text-align: center; padding-top: 35px; margin: 0 auto;">
-            <form action="/login" method="post"  onsubmit="sConsole(event)">
-                <div class="form-group">
-                    <input class="form-control" style="height: 40px;width: 100%; border: none; outline: none;border-bottom: 2px solid #4caf50; " type="text" name="username" placeholder="username" required>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" id="password" style="height: 40px;width: 100%; border: none; outline: none;border-bottom: 2px solid #4caf50; " type="password"  onclick ="toggle()" name="password" placeholder="password" required>  
-                    <h6 class="pull-left" id="displaypassworderror"></h6>
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-sm btn-primary btn-block">Login</button>
-                </div>
-            </form>
-             <a class="btn btn-primary btn-large" href="/campgrounds">Go Back</a>
-            <a class="btn btn-success btn-large" href="/forgot">Forgot Password!!</a>
-        </div>
-    </div>
-</div>
-<script>
-//    var password = document.getElementById('password');
-  
-//       function sConsole(event){
-//         var password1 = password.value;
-//         var display = document.getElementById('displaypassworderror');
-//         display.style.display = "none";
-//           event.preventDefault(); 
-//          if(password1.length<8){
-//              display.style.display = "block";
-//              display.innerHTML = "password should be strong";
-//          }else{
-//              display.style.display = "none";
-//              display.innerHTML = "";
-//          }
-//       }
-//    function toggle(){
-//             if (password.type === "password") { 
-//                 password.type = "text"; 
-//             } 
-//             else { 
-//                 password.type = "password"; 
-//             } 
-//    }
-   
-</script>
-<% include ./partials/footer %>
+					<span class="login100-form-title p-t-20 p-b-45">
+						Login Form
+					</span>
 
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+						<input class="input100" type="text" name="username" placeholder="Username" required>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+						<input class="input100" type="password" name="password" placeholder="Password" required>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock"></i>
+						</span>
+					</div>
+
+					<div class="container-login100-form-btn p-t-10">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+
+					<div class="text-center w-full p-t-25 p-b-230">
+						<a href="/forgot" class="txt1">
+							Forgot Username / Password?
+						</a>
+					</div>
+
+					<div class="text-center w-full">
+						<a class="txt1" href="/register">
+							Create new account
+							<i class="fa fa-long-arrow-right"></i>						
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="/stylesheets/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/stylesheets/vendor/bootstrap/js/popper.js"></script>
+	<script src="/stylesheets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/stylesheets/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/stylesheets/js/main.js"></script>
+
+</body>
+</html>
